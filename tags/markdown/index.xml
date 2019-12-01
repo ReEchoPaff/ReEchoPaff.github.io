@@ -5,20 +5,21 @@
     <link>https://ReEchoPaff.github.io/tags/markdown/</link>
     <description>Recent content in markdown on ReEchoPaff</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
     <copyright>Written by ReEchoPaff，转载请注明出处，谢谢！</copyright>
-    <lastBuildDate>Mon, 02 Dec 2019 04:04:06 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 02 Dec 2019 04:50:45 +0800</lastBuildDate>
     
 	<atom:link href="https://ReEchoPaff.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Hugo搭建博客实践</title>
+      <title>hugo搭建博客实践</title>
       <link>https://ReEchoPaff.github.io/post/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%AE%9E%E8%B7%B5/</link>
-      <pubDate>Mon, 02 Dec 2019 04:04:06 +0800</pubDate>
+      <pubDate>Mon, 02 Dec 2019 04:50:45 +0800</pubDate>
       
       <guid>https://ReEchoPaff.github.io/post/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%AE%9E%E8%B7%B5/</guid>
-      <description>简介 1 hugo生成静态网站内容，托管在GitHub仓库，搭配Netlify实现自动化部署。 环境 ubuntu18.04 hugo v0.59.1 linux/amd64 主题：hugo-theme-even 托</description>
+      <description>&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+
+&lt;p&gt;hugo生成静态网站内容，托管在GitHub仓库，搭配Netlify实现自动化部署。&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -5,9 +5,8 @@
     <link>https://ReEchoPaff.github.io/</link>
     <description>Recent content on ReEchoPaff</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
     <copyright>Written by ReEchoPaff，转载请注明出处，谢谢！</copyright>
-    <lastBuildDate>Sun, 20 Aug 2017 21:38:52 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 02 Dec 2019 04:50:45 +0800</lastBuildDate>
     
 	<atom:link href="https://ReEchoPaff.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -22,18 +21,14 @@
     </item>
     
     <item>
-      <title></title>
+      <title>hugo搭建博客实践</title>
       <link>https://ReEchoPaff.github.io/post/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%AE%9E%E8%B7%B5/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 02 Dec 2019 04:50:45 +0800</pubDate>
       
       <guid>https://ReEchoPaff.github.io/post/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%AE%9E%E8%B7%B5/</guid>
-      <description>简介 ​ hugo生成静态网站内容，托管在GitHub仓库，搭配Netlify实现自动化部署。
-环境  ubuntu18.04 hugo v0.59.1 linux/amd64 主题：hugo-theme-even 托管仓库：github 自动化部署：Netlify  安装hugo win，mac和linux下都有各自平台的简单安装方式，只是版本不一定能及时跟上最新的，但一般差别不大。我本地用的是ubuntu18.04，已经安装了go的环境，因此采用github上的源码安装的方式。
-1  $ go get github.com/gohugoio/hugo   源码会下载到 $GOPATH/src 目录，二进制在 $GOPATH/bin/
-如果需要更新所有Hugo的依赖库，增加 -u 参数：
-1  $ go get -u github.com/gohugoio/hugo   在bash内给hugo程序添加别名：
-1  $ sudo vim ~/.bashrc   添加如下：
-1 2  # 设置hugo别名 我个人配置的go环境：$GOPATH = /home/reguo/Code/Go alias hugo=&amp;#39;/home/reguo/Code/Go/bin/hugo&amp;#39;  1  $ source ~/.bashrc   新建站点 1 2 3 4 5 6 7 8 9 10 11  $ hugo new site myblog $ tree myblog myblog ├── archetypes │ └── default.</description>
+      <description>&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+
+&lt;p&gt;hugo生成静态网站内容，托管在GitHub仓库，搭配Netlify实现自动化部署。&lt;/p&gt;</description>
     </item>
     
   </channel>
