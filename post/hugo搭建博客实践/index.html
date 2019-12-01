@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Hugo搭建博客实践 - ReEchoPaff</title>
+  <title> - ReEchoPaff</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,13 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="ReEchoPaff" /><meta name="description" content="简介 1 hugo生成静态网站内容，托管在GitHub仓库，搭配Netlify实现自动化部署。 环境 ubuntu18.04 hugo v0.59.1 linux/amd64 主题：hugo-theme-even 托" /><meta name="keywords" content="blog, code, golang, python" />
+<meta name="author" content="ReEchoPaff" /><meta name="description" content="简介 ​ hugo生成静态网站内容，托管在GitHub仓库，搭配Netlify实现自动化部署。
+环境  ubuntu18.04 hugo v0.59.1 linux/amd64 主题：hugo-theme-even 托管仓库：github 自动化部署：Netlify  安装hugo win，mac和linux下都有各自平台的简单安装方式，只是版本不一定能及时跟上最新的，但一般差别不大。我本地用的是ubuntu18.04，已经安装了go的环境，因此采用github上的源码安装的方式。
+1  $ go get github.com/gohugoio/hugo   源码会下载到 $GOPATH/src 目录，二进制在 $GOPATH/bin/
+如果需要更新所有Hugo的依赖库，增加 -u 参数：
+1  $ go get -u github.com/gohugoio/hugo   在bash内给hugo程序添加别名：
+1  $ sudo vim ~/.bashrc   添加如下：
+1 2  # 设置hugo别名 我个人配置的go环境：$GOPATH = /home/reguo/Code/Go alias hugo=&amp;#39;/home/reguo/Code/Go/bin/hugo&amp;#39;  1  $ source ~/.bashrc   新建站点 1 2 3 4 5 6 7 8 9 10 11  $ hugo new site myblog $ tree myblog myblog ├── archetypes │ └── default." /><meta name="keywords" content="blog, code, golang, python" />
 
 
 
@@ -38,26 +44,42 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Hugo搭建博客实践" />
-<meta property="og:description" content="简介 1 hugo生成静态网站内容，托管在GitHub仓库，搭配Netlify实现自动化部署。 环境 ubuntu18.04 hugo v0.59.1 linux/amd64 主题：hugo-theme-even 托" />
+<meta property="og:title" content="" />
+<meta property="og:description" content="简介 ​ hugo生成静态网站内容，托管在GitHub仓库，搭配Netlify实现自动化部署。
+环境  ubuntu18.04 hugo v0.59.1 linux/amd64 主题：hugo-theme-even 托管仓库：github 自动化部署：Netlify  安装hugo win，mac和linux下都有各自平台的简单安装方式，只是版本不一定能及时跟上最新的，但一般差别不大。我本地用的是ubuntu18.04，已经安装了go的环境，因此采用github上的源码安装的方式。
+1  $ go get github.com/gohugoio/hugo   源码会下载到 $GOPATH/src 目录，二进制在 $GOPATH/bin/
+如果需要更新所有Hugo的依赖库，增加 -u 参数：
+1  $ go get -u github.com/gohugoio/hugo   在bash内给hugo程序添加别名：
+1  $ sudo vim ~/.bashrc   添加如下：
+1 2  # 设置hugo别名 我个人配置的go环境：$GOPATH = /home/reguo/Code/Go alias hugo=&#39;/home/reguo/Code/Go/bin/hugo&#39;  1  $ source ~/.bashrc   新建站点 1 2 3 4 5 6 7 8 9 10 11  $ hugo new site myblog $ tree myblog myblog ├── archetypes │ └── default." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ReEchoPaff.github.io/post/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%AE%9E%E8%B7%B5/" />
-<meta property="article:published_time" content="2019-12-02T04:04:06+08:00" />
-<meta property="article:modified_time" content="2019-12-02T04:04:06+08:00" />
-<meta itemprop="name" content="Hugo搭建博客实践">
-<meta itemprop="description" content="简介 1 hugo生成静态网站内容，托管在GitHub仓库，搭配Netlify实现自动化部署。 环境 ubuntu18.04 hugo v0.59.1 linux/amd64 主题：hugo-theme-even 托">
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="简介 ​ hugo生成静态网站内容，托管在GitHub仓库，搭配Netlify实现自动化部署。
+环境  ubuntu18.04 hugo v0.59.1 linux/amd64 主题：hugo-theme-even 托管仓库：github 自动化部署：Netlify  安装hugo win，mac和linux下都有各自平台的简单安装方式，只是版本不一定能及时跟上最新的，但一般差别不大。我本地用的是ubuntu18.04，已经安装了go的环境，因此采用github上的源码安装的方式。
+1  $ go get github.com/gohugoio/hugo   源码会下载到 $GOPATH/src 目录，二进制在 $GOPATH/bin/
+如果需要更新所有Hugo的依赖库，增加 -u 参数：
+1  $ go get -u github.com/gohugoio/hugo   在bash内给hugo程序添加别名：
+1  $ sudo vim ~/.bashrc   添加如下：
+1 2  # 设置hugo别名 我个人配置的go环境：$GOPATH = /home/reguo/Code/Go alias hugo=&#39;/home/reguo/Code/Go/bin/hugo&#39;  1  $ source ~/.bashrc   新建站点 1 2 3 4 5 6 7 8 9 10 11  $ hugo new site myblog $ tree myblog myblog ├── archetypes │ └── default.">
 
 
-<meta itemprop="datePublished" content="2019-12-02T04:04:06&#43;08:00" />
-<meta itemprop="dateModified" content="2019-12-02T04:04:06&#43;08:00" />
-<meta itemprop="wordCount" content="2234">
+
+<meta itemprop="wordCount" content="361">
 
 
 
-<meta itemprop="keywords" content="hugo,markdown,git," />
+<meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Hugo搭建博客实践"/>
-<meta name="twitter:description" content="简介 1 hugo生成静态网站内容，托管在GitHub仓库，搭配Netlify实现自动化部署。 环境 ubuntu18.04 hugo v0.59.1 linux/amd64 主题：hugo-theme-even 托"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="简介 ​ hugo生成静态网站内容，托管在GitHub仓库，搭配Netlify实现自动化部署。
+环境  ubuntu18.04 hugo v0.59.1 linux/amd64 主题：hugo-theme-even 托管仓库：github 自动化部署：Netlify  安装hugo win，mac和linux下都有各自平台的简单安装方式，只是版本不一定能及时跟上最新的，但一般差别不大。我本地用的是ubuntu18.04，已经安装了go的环境，因此采用github上的源码安装的方式。
+1  $ go get github.com/gohugoio/hugo   源码会下载到 $GOPATH/src 目录，二进制在 $GOPATH/bin/
+如果需要更新所有Hugo的依赖库，增加 -u 参数：
+1  $ go get -u github.com/gohugoio/hugo   在bash内给hugo程序添加别名：
+1  $ sudo vim ~/.bashrc   添加如下：
+1 2  # 设置hugo别名 我个人配置的go环境：$GOPATH = /home/reguo/Code/Go alias hugo=&#39;/home/reguo/Code/Go/bin/hugo&#39;  1  $ source ~/.bashrc   新建站点 1 2 3 4 5 6 7 8 9 10 11  $ hugo new site myblog $ tree myblog myblog ├── archetypes │ └── default."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -124,15 +146,13 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">Hugo搭建博客实践</h1>
+      <h1 class="post-title"></h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2019-12-02 </span>
-        <div class="post-category">
-            <a href="/categories/hugo/"> hugo </a>
-            </div>
-          <span class="more-meta"> 约 2234 字 </span>
-          <span class="more-meta"> 预计阅读 5 分钟 </span>
+        <span class="post-time"> 0001-01-01 </span>
+        
+          <span class="more-meta"> 约 361 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
         
       </div>
     </header>
@@ -165,14 +185,9 @@
       
 
 <h2 id="简介">简介</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">    hugo生成静态网站内容，托管在GitHub仓库，搭配Netlify实现自动化部署。</pre></td></tr></table>
-</div>
-</div>
+
+<p>​       hugo生成静态网站内容，托管在GitHub仓库，搭配Netlify实现自动化部署。</p>
+
 <h2 id="环境">环境</h2>
 
 <ul>
@@ -431,12 +446,12 @@ $ git push</code></pre></td></tr></table>
     <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">文章作者</span>
-    <span class="item-content">ReEchoPaff</span>
+    <span class="item-content"><a href="https://ReEchoPaff.github.io/" class="theme-link">ReEchoPaff</a></span>
   </p>
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2019-12-02
+        0001-01-01
         
     </span>
   </p>
@@ -447,11 +462,7 @@ $ git push</code></pre></td></tr></table>
   </p>
 </div>
 <footer class="post-footer">
-      <div class="post-tags">
-          <a href="/tags/hugo/">hugo</a>
-          <a href="/tags/markdown/">markdown</a>
-          <a href="/tags/git/">git</a>
-          </div>
+      
       <nav class="post-nav">
         
         
