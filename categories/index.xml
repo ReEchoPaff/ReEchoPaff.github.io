@@ -6,10 +6,19 @@
     <description>Recent content in Categories on ReEchoPaff</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Written by ReEchoPaff，转载请注明出处，谢谢！</copyright>
-    <lastBuildDate>Mon, 02 Dec 2019 04:50:45 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 03 Dec 2019 01:03:42 +0800</lastBuildDate>
     
 	<atom:link href="https://ReEchoPaff.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>git</title>
+      <link>https://ReEchoPaff.github.io/categories/git/</link>
+      <pubDate>Tue, 03 Dec 2019 01:03:42 +0800</pubDate>
+      
+      <guid>https://ReEchoPaff.github.io/categories/git/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>hugo</title>

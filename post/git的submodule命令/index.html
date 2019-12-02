@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Git的submodule命令 - ReEchoPaff</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="ReEchoPaff" /><meta name="description" content="git submodule git submodule add [url] [path]
+url：远程仓库地址
+" /><meta name="keywords" content="blog, code, golang, python" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.59.1 with theme even" />
+
+
+<link rel="canonical" href="https://ReEchoPaff.github.io/post/git%E7%9A%84submodule%E5%91%BD%E4%BB%A4/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Git的submodule命令" />
+<meta property="og:description" content="git submodule
+
+git submodule add [url] [path]
+url：远程仓库地址" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ReEchoPaff.github.io/post/git%E7%9A%84submodule%E5%91%BD%E4%BB%A4/" />
+<meta property="article:published_time" content="2019-12-03T01:03:42+08:00" />
+<meta property="article:modified_time" content="2019-12-03T01:03:42+08:00" />
+<meta itemprop="name" content="Git的submodule命令">
+<meta itemprop="description" content="git submodule
+
+git submodule add [url] [path]
+url：远程仓库地址">
+
+
+<meta itemprop="datePublished" content="2019-12-03T01:03:42&#43;08:00" />
+<meta itemprop="dateModified" content="2019-12-03T01:03:42&#43;08:00" />
+<meta itemprop="wordCount" content="951">
+
+
+
+<meta itemprop="keywords" content="git," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Git的submodule命令"/>
+<meta name="twitter:description" content="git submodule
+
+git submodule add [url] [path]
+url：远程仓库地址"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">ReEchoPaff</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">ReEchoPaff</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Git的submodule命令</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-12-03 </span>
+        <div class="post-category">
+            <a href="/categories/git/"> git </a>
+            </div>
+          <span class="more-meta"> 约 951 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#git-submodule">git submodule</a></li>
+<li><a href="#1-添加子模块">1.添加子模块</a></li>
+<li><a href="#2-克隆带有submodule的项目">2.克隆带有submodule的项目</a>
+<ul>
+<li><a href="#1-先克隆后更新">1. 先克隆后更新</a></li>
+<li><a href="#2-采用递归参数-recurse-submodules">2. 采用递归参数 &ndash;recurse-submodules</a></li>
+</ul></li>
+<li><a href="#3-修改更新submodule">3.修改更新submodule</a>
+<ul>
+<li><a href="#直接在主项目的submodule下修改">直接在主项目的submodule下修改</a></li>
+</ul></li>
+<li><a href="#4-删除submodule">4.删除submodule</a></li>
+<li><a href="#5-修改子模块的url">5.修改子模块的url</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="git-submodule">git submodule</h2>
+
+<p>git submodule add [url] [path]<br />
+url：远程仓库地址</p>
+
+<p>path：本地子模块存放地址</p>
+
+<h2 id="1-添加子模块">1.添加子模块</h2>
+
+<p>首先创建父项目parentRepo，并添加sub1Repo子模块。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">mkdir parentRepo
+<span class="nb">cd</span> parentRepo/
+git init
+
+git submodule add ~/Code/blog/exp1Repo sub1Repo</code></pre></td></tr></table>
+</div>
+</div>
+<p>git status 看到如下信息</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">位于分支 master
+
+尚无提交
+
+要提交的变更：
+  （使用 &#34;git rm --cached &lt;文件&gt;...&#34; 以取消暂存）
+
+	新文件：   .gitmodules
+	新文件：   sub1Repo</pre></td></tr></table>
+</div>
+</div>
+<p>cat .gitmodules 看到submodule的路径以及对应的远程仓库地址（此处远程仓库也可以github仓库）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[submodule &#34;sub1Repo&#34;]
+	path = sub1Repo
+	url = /home/reguo/Code/blog/exp1Repo</pre></td></tr></table>
+</div>
+</div>
+<p>提交这两个文件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git add .
+git commit -m <span class="s1">&#39;add sub1Repo&#39;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>查看子模块的commit id</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">~/Code/blog/parentRepo/.git/modules/sub1Repo$ cat packed-refs 
+<span class="c1"># pack-refs with: peeled fully-peeled sorted</span> 
+adc1415eb37f2047b9514605420ce1554c91528e refs/remotes/origin/master</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="2-克隆带有submodule的项目">2.克隆带有submodule的项目</h2>
+
+<p>两种方式</p>
+
+<h3 id="1-先克隆后更新">1. 先克隆后更新</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git clone /home/reguo/Code/blog/parentRepo/.git
+<span class="nb">cd</span> parentRepo/
+git submodule init
+git submodule update</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="2-采用递归参数-recurse-submodules">2. 采用递归参数 &ndash;recurse-submodules</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git clone /home/reguo/Code/blog/parentRepo/.git --recurse-submodules 
+正克隆到 <span class="s1">&#39;parentRepo&#39;</span>...
+完成。
+子模组 <span class="s1">&#39;sub1Repo&#39;</span>（/home/reguo/Code/blog/exp1Repo）未对路径 <span class="s1">&#39;sub1Repo&#39;</span> 注册
+正克隆到 <span class="s1">&#39;/home/reguo/Code/blog/exp2Repo/parentRepo/sub1Repo&#39;</span>...
+完成。
+子模组路径 <span class="s1">&#39;sub1Repo&#39;</span>：检出 <span class="s1">&#39;adc1415eb37f2047b9514605420ce1554c91528e&#39;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>可以连同子仓库一起克隆下来。</p>
+
+<h2 id="3-修改更新submodule">3.修改更新submodule</h2>
+
+<h3 id="直接在主项目的submodule下修改">直接在主项目的submodule下修改</h3>
+
+<p>切换到子模块内修改代码，然后在子模块内提交，此时的commit id是本地最新的。将此提交push的远程子仓库，会报错，显示无法push。需要在远程的子仓库内修改配置，添加如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[receive]
+	denyCurrentBranch = ignore</pre></td></tr></table>
+</div>
+</div>
+<p>此时再次push，显示成功，这种情况下并不会更新到远程的子仓库（commit id会更新）。但是如果有别的仓库是克隆自这个主仓库，在别的仓库下执行</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">git pull
+git submodule update</pre></td></tr></table>
+</div>
+</div>
+<p>会获得这次子仓库的更新。<br />
+另外当远程子仓库有更新时，执行<code>git submodule update</code>，也可以进行更新（但是会覆盖掉本地对子仓库的修改）。</p>
+
+<h2 id="4-删除submodule">4.删除submodule</h2>
+
+<p>执行如下命令</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git submodule deinit <span class="o">[</span>子模块名<span class="o">]</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>会清除子模块内容</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git rm --cached <span class="o">[</span>子模块名<span class="o">]</span>
+git submodule
+git commit -am <span class="s1">&#39;Remove a submodule.[子模块名]&#39;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>删除<code>.gitmodules</code>中记录的模块信息（&ndash;cached选项清除.git/modules中的缓存),
+之后可以在使用 rm 命令删除对应的子模块文件夹和<code>.gitmodule</code>文件.</p>
+
+<h2 id="5-修改子模块的url">5.修改子模块的url</h2>
+
+<p>修改<code>.gitmodule</code>内对应模块的url，
+使用<code>git submodule sync</code>更新到<code>.git/config</code>文件,
+<code>git commit -am &quot;Update submodule url.&quot;</code> 提交变更.</p>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">ReEchoPaff</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2019-12-03
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" tar    get="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/git/">git</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%AE%9E%E8%B7%B5/">
+            <span class="next-text nav-default">hugo搭建博客实践</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/ReEchoPaff" class="iconfont icon-github" title="github"></a>
+  <a href="https://ReEchoPaff.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Written by ReEchoPaff，转载请注明出处，谢谢！</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
