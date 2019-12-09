@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>markdown on ReEchoPaff</title>
-    <link>https://ReEchoPaff.github.io/tags/markdown/</link>
+    <link>https://ReEchoPaff.github.io/categories/markdown/</link>
     <description>Recent content in markdown on ReEchoPaff</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Written by ReEchoPaff，转载请注明出处，谢谢！</copyright>
     <lastBuildDate>Mon, 09 Dec 2019 18:58:03 +0800</lastBuildDate>
     
-	<atom:link href="https://ReEchoPaff.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ReEchoPaff.github.io/categories/markdown/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,17 +18,6 @@
       
       <guid>https://ReEchoPaff.github.io/post/markdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/</guid>
       <description>&lt;h2 id=&#34;空白符&#34;&gt;空白符&lt;/h2&gt;</description>
-    </item>
-    
-    <item>
-      <title>hugo搭建博客实践</title>
-      <link>https://ReEchoPaff.github.io/post/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%AE%9E%E8%B7%B5/</link>
-      <pubDate>Mon, 02 Dec 2019 04:50:45 +0800</pubDate>
-      
-      <guid>https://ReEchoPaff.github.io/post/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%AE%9E%E8%B7%B5/</guid>
-      <description>&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
-
-&lt;p&gt;hugo生成静态网站内容，托管在GitHub仓库，搭配Netlify实现自动化部署。&lt;/p&gt;</description>
     </item>
     
   </channel>
