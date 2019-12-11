@@ -60,7 +60,7 @@ ubuntu 18.04
 
 <meta itemprop="datePublished" content="2019-12-10T14:57:38&#43;08:00" />
 <meta itemprop="dateModified" content="2019-12-10T14:57:38&#43;08:00" />
-<meta itemprop="wordCount" content="328">
+<meta itemprop="wordCount" content="703">
 
 
 
@@ -146,8 +146,8 @@ ubuntu 18.04
         <div class="post-category">
             <a href="/categories/linux/"> linux </a>
             </div>
-          <span class="more-meta"> 约 328 字 </span>
-          <span class="more-meta"> 预计阅读 1 分钟 </span>
+          <span class="more-meta"> 约 703 字 </span>
+          <span class="more-meta"> 预计阅读 2 分钟 </span>
         
       </div>
     </header>
@@ -167,6 +167,8 @@ ubuntu 18.04
 <li><a href="#下载vim插件管理工具vundle">下载vim插件管理工具Vundle</a></li>
 <li><a href="#安装插件">安装插件</a></li>
 <li><a href="#配色方案">配色方案</a></li>
+<li><a href="#vim-go">vim-go</a></li>
+<li><a href="#参考">参考</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -270,6 +272,31 @@ mv ~/.vimrc ~/.vimrcbak</p>
 </div>
 </div>
 <p>通过不停的按 <code>tab</code> 键可以切换不同的配色方案。</p>
+
+<h3 id="vim-go">vim-go</h3>
+
+<p>这是一个go语言插件，需要安装一些Go的包才可以正常使用Go包的相关功能。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-vim" data-lang="vim"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-vim" data-lang="vim">    :<span class="nx">GoInstallBinaries</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>这个时候如果报错 <code>go execution not found</code> , 主要原因就是当采用 <code>sudo vim</code> 执行上一条安装命令，sudo以管理权限执行命令的时候，linux将PATH环境变量进行了重置，当然这主要是因为系统安全的考虑，但却使得sudo搜索的路径不是我们想要的PATH变量的路径，当然就找不到我们想要的命令了。解决方案如下：</p>
+
+<p>打开sudo的配置文件：sudo visudo</p>
+
+<p>将Defaults env_reset改成Defaults !env_reset取消掉对PATH变量的重置，然后在.bashrc中最后添加alias sudo=&lsquo;sudo env PATH=$PATH&rsquo;，这样sudo执行命令时所搜寻的路径就是系统的PATH变量中的路径，如想添加其他变量也是类似。</p>
+
+<h3 id="参考">参考</h3>
+
+<ul>
+<li><del><a href="https://www.cnblogs.com/pinganzi/p/5254995.html">sudo -E的意思</a></del></li>
+<li><a href="https://www.cnblogs.com/A-Song/archive/2013/03/09/2951951.html">sudo找不到命令：修改sudo的PATH路径</a></li>
+<li><a href="https://learnku.com/articles/24924">将 VIM 打造成 go 语言的 ide</a></li>
+</ul>
     </div>
 
     <div class="post-copyright">
