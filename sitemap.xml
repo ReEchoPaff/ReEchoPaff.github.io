@@ -10,41 +10,62 @@
   
   <url>
     <loc>https://ReEchoPaff.github.io/categories/</loc>
-    <lastmod>2019-12-10T14:57:38+08:00</lastmod>
+    <lastmod>2019-12-15T01:51:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://ReEchoPaff.github.io/categories/linux/</loc>
-    <lastmod>2019-12-10T14:57:38+08:00</lastmod>
+    <loc>https://ReEchoPaff.github.io/tags/golang/</loc>
+    <lastmod>2019-12-15T01:51:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ReEchoPaff.github.io/categories/golang/</loc>
+    <lastmod>2019-12-15T01:51:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ReEchoPaff.github.io/post/golang%E7%9A%84%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc>
+    <lastmod>2019-12-15T01:51:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://ReEchoPaff.github.io/tags/linux/</loc>
-    <lastmod>2019-12-10T14:57:38+08:00</lastmod>
+    <lastmod>2019-12-15T01:51:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://ReEchoPaff.github.io/post/</loc>
-    <lastmod>2019-12-10T14:57:38+08:00</lastmod>
+    <lastmod>2019-12-15T01:51:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://ReEchoPaff.github.io/</loc>
-    <lastmod>2019-12-10T14:57:38+08:00</lastmod>
+    <lastmod>2019-12-15T01:51:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://ReEchoPaff.github.io/tags/</loc>
+    <lastmod>2019-12-15T01:51:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ReEchoPaff.github.io/categories/linux/</loc>
     <lastmod>2019-12-10T14:57:38+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -65,14 +86,14 @@
   </url>
   
   <url>
-    <loc>https://ReEchoPaff.github.io/tags/markdown/</loc>
+    <loc>https://ReEchoPaff.github.io/categories/markdown/</loc>
     <lastmod>2019-12-09T18:58:03+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://ReEchoPaff.github.io/categories/markdown/</loc>
+    <loc>https://ReEchoPaff.github.io/tags/markdown/</loc>
     <lastmod>2019-12-09T18:58:03+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
